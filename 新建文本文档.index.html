@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>费用计算器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>费用计算器</h1>
+        <label for="start_time">开始时间 (格式：YYYY-MM-DD HH:MM)：</label>
+        <input type="datetime-local" id="start_time">
+        
+        <label for="end_time">结束时间 (格式：YYYY-MM-DD HH:MM)：</label>
+        <input type="datetime-local" id="end_time">
+        
+        <label for="include_travel">是否有路费：</label>
+        <select id="include_travel">
+            <option value="yes">是</option>
+            <option value="no">否</option>
+        </select>
+        
+        <label for="include_drink">是否有喝酒：</label>
+        <select id="include_drink">
+            <option value="yes">是</option>
+            <option value="no">否</option>
+        </select>
+        
+        <button onclick="calculateCost()">计算费用</button>
+        
+        <h2 id="result">总费用为：--元</h2>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
